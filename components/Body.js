@@ -1,7 +1,14 @@
-import React from "react";
+"use client";
 import Image from "next/image";
+import React, { useState } from "react";
 
 const Body = () => {
+  const [shows, setShows] = useState();
+
+  fetch("https://api.tvmaze.com")
+    .then((response) => response.json())
+    .then((data) => setShows(data));
+
   return (
     <div style={{ backgroundColor: "#171d2f", color: "white" }}>
       <div>
@@ -10,6 +17,7 @@ const Body = () => {
       </div>
       <div>
         <h2>Trending</h2>
+        {shows}
       </div>
       <div>
         <h2>Recommended for you</h2>
