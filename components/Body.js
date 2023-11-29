@@ -3,9 +3,13 @@ import Image from "next/image";
 import React, { useState } from "react";
 
 const Body = () => {
-  const [shows, setShows] = useState();
+  const [shows, setShows] = useState([
+    {
+      shows: { png: "" },
+    },
+  ]);
 
-  fetch("https://api.tvmaze.com")
+  fetch("https://api.tvmaze.com/shows")
     .then((response) => response.json())
     .then((data) => setShows(data));
 
