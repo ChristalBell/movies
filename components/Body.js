@@ -1,17 +1,19 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const Body = () => {
-  const [shows, setShows] = useState([
-    {
-      shows: { png: "" },
-    },
-  ]);
+  // const [shows, setShows] = useState([
+  //   {
+  //     shows: { png: "" },
+  //   },
+  // ]);
 
-  fetch("https://api.tvmaze.com/shows")
-    .then((response) => response.json())
-    .then((data) => setShows(data));
+  useEffect(() => {
+    fetch("https://api.tvmaze.com")
+      .then((response) => response.json())
+      .then((data) => console.log(data));
+  }, []);
 
   return (
     <div style={{ backgroundColor: "#171d2f", color: "white" }}>
@@ -21,7 +23,7 @@ const Body = () => {
       </div>
       <div>
         <h2>Trending</h2>
-        {shows}
+        {/* {shows} */}
       </div>
       <div>
         <h2>Recommended for you</h2>
