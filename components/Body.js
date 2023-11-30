@@ -10,7 +10,7 @@ const Body = () => {
   // ]);
 
   useEffect(() => {
-    fetch("https://api.tvmaze.com")
+    fetch("https://api.tvmaze.com/schedule/full")
       .then((response) => response.json())
       .then((data) => console.log(data));
   }, []);
@@ -23,7 +23,8 @@ const Body = () => {
       </div>
       <div>
         <h2>Trending</h2>
-        {/* {shows} */}
+        {/* {image}
+        {name} */}
       </div>
       <div>
         <h2>Recommended for you</h2>
