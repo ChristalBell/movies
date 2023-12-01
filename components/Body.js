@@ -3,17 +3,24 @@ import Image from "next/image";
 import React, { useState, useEffect } from "react";
 
 const Body = () => {
-  // const [shows, setShows] = useState([
-  //   {
-  //     shows: { png: "" },
-  //   },
-  // ]);
+  const [shows, setShows] = useState([
+    {
+      name: "",
+      season: 0,
+      number: 0,
+      rating: { average: 0 },
+      image: { medium: "" },
+      summary: "",
+    },
+  ]);
 
   useEffect(() => {
-    fetch("https://api.tvmaze.com/schedule/full")
+    fetch("https://api.tvmaze.com/singlesearch/shows?q=:query")
       .then((response) => response.json())
-      .then((data) => console.log(data));
+      .then((data) => setShows(data));
   }, []);
+
+  console.log({ shows });
 
   return (
     <div style={{ backgroundColor: "#171d2f", color: "white" }}>
@@ -23,8 +30,14 @@ const Body = () => {
       </div>
       <div>
         <h2>Trending</h2>
-        {/* {image}
-        {name} */}
+        season= {shows.season}
+        key= {shows.name}
+        {/* <Image
+          src={shows.image.medium}
+          alt="show cover"
+          height={20}
+          width={20}
+        /> */}
       </div>
       <div>
         <h2>Recommended for you</h2>
