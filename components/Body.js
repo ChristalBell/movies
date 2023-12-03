@@ -30,8 +30,9 @@ const Body = () => {
       </div>
       <div>
         <h2>Trending</h2>
-        season= {shows.season}
-        key= {shows.name}
+        {shows.season}
+        {shows.name}
+        <Image src={shows.image} alt="show cover page" height={40} width={40} />
         {/* <Image
           src={shows.image.medium}
           alt="show cover"
