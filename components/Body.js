@@ -30,18 +30,18 @@ const Body = () => {
       </div>
       <div>
         <h2>Trending</h2>
-        {shows.season}
-        {shows.name}
-        <Image src={shows.image} alt="show cover page" height={40} width={40} />
+        <img src={shows.image.medium} alt="show cover top" />
         {/* <Image
           src={shows.image.medium}
           alt="show cover"
-          height={20}
-          width={20}
+          height={400}
+          width={400}
         /> */}
       </div>
       <div>
         <h2>Recommended for you</h2>
+        {shows.season}
+        {shows.name}
       </div>
     </div>
   );
