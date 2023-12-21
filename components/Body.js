@@ -32,26 +32,11 @@ const Body = () => {
       </div>
       <div>
         <h2>Trending</h2>
-        <img src={shows.image.medium} alt="show cover top" />
-        {/* <Image
-          src={shows.image.medium}
-          alt="show cover"
-          height={400}
-          width={400}
-        /> */}
+        <img src={shows.image} alt="show cover top" />
 
-        {/* // {shows.map(showList)}
-        // {shows.season}
-        // {shows.name} */}
-      </div>
-      <div>
-        {/* {showList.map((shows) => {
-  return (
-    <h2>Recommended for you</h2>
-<h1>{shows.name}</h1>
-<h2>{shows.season}</h2>
-  );
-} */}
+        {shows.map((show) => {
+          return <img src={shows.name} alt="show cover" key={shows.name} />;
+        })}
       </div>
     </div>
   );
