@@ -14,6 +14,8 @@ const Body = () => {
     },
   ]);
 
+  const showList = [];
+
   useEffect(() => {
     fetch("https://api.tvmaze.com/singlesearch/shows?q=:query")
       .then((response) => response.json())
@@ -37,11 +39,19 @@ const Body = () => {
           height={400}
           width={400}
         /> */}
+
+        {/* // {shows.map(showList)}
+        // {shows.season}
+        // {shows.name} */}
       </div>
       <div>
-        <h2>Recommended for you</h2>
-        {shows.season}
-        {shows.name}
+        {/* {showList.map((shows) => {
+  return (
+    <h2>Recommended for you</h2>
+<h1>{shows.name}</h1>
+<h2>{shows.season}</h2>
+  );
+} */}
       </div>
     </div>
   );
