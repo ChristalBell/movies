@@ -34,8 +34,11 @@ const Body = () => {
         <h2>Trending</h2>
         <img src={shows.image} alt="show cover top" />
 
-        {shows.map((show) => {
-          return <img src={shows.name} alt="show cover" key={shows.name} />;
+        {showList.map((show) => {
+          return <h2 key={shows.name}>{shows.name}</h2>;
+
+          console.log(shows.name);
+          // return <img src={shows.name} alt="show cover" key={shows.name} />;
         })}
       </div>
     </div>
