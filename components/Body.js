@@ -14,7 +14,7 @@ const Body = () => {
     },
   ]);
 
-  const showList = [];
+  const showList = [shows];
 
   useEffect(() => {
     fetch("https://api.tvmaze.com/singlesearch/shows?q=:query")
@@ -31,15 +31,12 @@ const Body = () => {
         <input type="text" placeholder="Search for movies or TV series" />
       </div>
       <div>
-        <h2>Trending</h2>
-        <img src={shows.image} alt="show cover top" />
+        <h2>Trending</h2>  
 
-        {showList.map((show) => {
-          return <h2 key={shows.name}>{shows.name}</h2>;
-
-          console.log(shows.name);
-          // return <img src={shows.name} alt="show cover" key={shows.name} />;
-        })}
+        let totalShowList = showList.map(function(element) {
+          return `${element.name}`;
+        })
+        console.log(totalShowList);     
       </div>
     </div>
   );
