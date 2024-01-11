@@ -35,7 +35,19 @@ const Body = () => {
       <div>
         <h2>Trending</h2>
         {shows.map((show) => {
-          return <h3 key={show.show.name}> {show.show.name} </h3>;
+          return (
+            (<h3 key={show.show.name}> {show.show.name} </h3>),
+            (
+              <Image
+                src={show.image}
+                alt="show cover"
+                width={40}
+                height={40}
+                key={show.show.image}
+              />
+            ),
+            (<p key={show.show.name}> Rating = {show.show.rating.average}</p>)
+          );
         })}
       </div>
     </div>
