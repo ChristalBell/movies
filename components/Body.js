@@ -36,17 +36,31 @@ const Body = () => {
         <h2>Trending</h2>
         {shows.map((show) => {
           return (
-            (<h3 key={show.show.name}> {show.show.name} </h3>),
-            (
+            <article key={show.show.name}>
+              <header>
+                {" "}
+                <h3>{show.show.name}</h3>
+              </header>
               <Image
                 src={show.image}
-                alt="show cover"
+                alt={show.show.name}
                 width={40}
                 height={40}
-                key={show.show.image}
               />
-            ),
-            (<p key={show.show.name}> Rating = {show.show.rating.average}</p>)
+              <p>Rating = {show.show.rating.average}</p>
+            </article>
+
+            // (<h3 key={show.show.name}> {show.show.name} </h3>),
+            // (
+            //   <Image
+            //     src={show.image}
+            //     alt="show cover"
+            //     width={40}
+            //     height={40}
+            //     key={show.show.image}
+            //   />
+            // ),
+            // (<p key={show.show.name}> Rating = {show.show.rating.average}</p>)
           );
         })}
       </div>
