@@ -7,8 +7,6 @@ const Body = () => {
     {
       show: {
         name: "",
-        season: 0,
-        number: 0,
         rating: { average: 0 },
         image: { medium: "" },
         summary: "",
@@ -47,7 +45,10 @@ const Body = () => {
                 width={40}
                 height={40}
               />
-              <p>Rating = {show.show.rating.average}</p>
+              <p>
+                Rating = {show.show.rating.average}
+                {show.show.summary}
+              </p>
             </article>
 
             // (<h3 key={show.show.name}> {show.show.name} </h3>),
