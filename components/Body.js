@@ -25,10 +25,20 @@ const Body = () => {
   console.log(shows);
 
   return (
-    <div style={{ backgroundColor: "#171d2f", color: "white" }}>
+    <div
+      style={{
+        backgroundColor: "#171d2f",
+        color: "white",
+        padding: "2.5rem",
+      }}
+    >
       <div>
         <Image src="/assets/search.png" alt="search" width={20} height={20} />
-        <input type="text" placeholder="Search for movies or TV series" />
+        <input
+          type="text"
+          placeholder="Search for movies or TV series"
+          size={30}
+        />
       </div>
       <div>
         <h2>Trending</h2>

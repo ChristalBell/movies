@@ -8,6 +8,7 @@ const Header = () => {
         backgroundColor: "#5c6990",
         display: "flex",
         justifyContent: "space-between",
+        padding: "2.5rem",
       }}
     >
       <div
