@@ -10,6 +10,8 @@ const Body = () => {
         rating: { average: 0 },
         image: { medium: "" },
         summary: "",
+        genres: [""],
+        premiered: "",
       },
     },
   ]);
@@ -33,28 +35,39 @@ const Body = () => {
       }}
     >
       <div>
-        <Image src="/assets/search.png" alt="search" width={20} height={20} />
+        <Image
+          src="/assets/search.png"
+          alt="search"
+          width={20}
+          height={20}
+          style={{ marginRight: "2rem" }}
+        />
         <input
           type="text"
           placeholder="Search for movies or TV series"
           size={30}
+          style={{ background: "none", border: "none", color: "white" }}
         />
       </div>
-      <div>
-        <h2>Trending</h2>
+
+      <h2>Trending</h2>
+      <div style={{ display: "flex", justifyContent: "space-between" }}>
         {shows.map((show) => {
           return (
             <article key={show.show.name}>
-              <header>
-                {" "}
-                <h3>{show.show.name}</h3>
-              </header>
               <Image
                 src={show.image}
                 alt={show.show.name}
                 width={40}
                 height={40}
               />
+              <p>
+                {show.show.premiered} {show.show.genres}
+              </p>
+              <header>
+                <h4>{show.show.name}</h4>
+              </header>
+
               <p>
                 Rating = {show.show.rating.average}
                 {show.show.summary}
