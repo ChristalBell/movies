@@ -51,10 +51,14 @@ const Body = () => {
       </div>
 
       <h2>Trending</h2>
-      <div style={{ display: "flex", justifyContent: "space-between" }}>
+      <div
+        style={{
+          display: "flex",
+        }}
+      >
         {shows.map((show) => {
           return (
-            <article key={show.show.name}>
+            <article key={show.show.name} style={{ marginLeft: "2rem" }}>
               <Image
                 src={show.image}
                 alt={show.show.name}
