@@ -19,7 +19,13 @@ const Header = () => {
       </div>
 
       <Image src="/assets/squares.png" alt="squares" width={20} height={20} />
-      <Image src="/assets/film.png" alt="film" width={20} height={20} />
+      <Image
+        src="/assets/film.png"
+        alt="film"
+        width={20}
+        height={20}
+        style={{ marginRight: "2rem" }}
+      />
       <Image src="/assets/television.png" alt="tv" width={20} height={20} />
       <Image src="/assets/bookmark.png" alt="saved" width={20} height={20} />
 

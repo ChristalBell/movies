@@ -54,13 +54,17 @@ const Body = () => {
       <div
         style={{
           display: "flex",
+          flexWrap: "wrap",
         }}
       >
         {shows.map((show) => {
           return (
-            <article key={show.show.name} style={{ marginLeft: "2rem" }}>
-              <Image
-                src={show.image}
+            <article
+              key={show.show.name}
+              style={{ marginLeft: "2rem", maxWidth: "20vw" }}
+            >
+              <img
+                src={show.show.image.original}
                 alt={show.show.name}
                 width={40}
                 height={40}
