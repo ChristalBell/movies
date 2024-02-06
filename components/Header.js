@@ -18,7 +18,13 @@ const Header = () => {
         <Image src="/assets/movie.png" alt="home" width={20} height={20} />
       </div>
 
-      <Image src="/assets/squares.png" alt="squares" width={20} height={20} />
+      <Image
+        src="/assets/squares.png"
+        alt="squares"
+        width={20}
+        height={20}
+        style={{ marginRight: "2rem" }}
+      />
       <Image
         src="/assets/film.png"
         alt="film"

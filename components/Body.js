@@ -66,8 +66,9 @@ const Body = () => {
               <img
                 src={show.show.image.original}
                 alt={show.show.name}
-                width={40}
-                height={40}
+                width={200}
+                height={200}
+                style={{ borderRadius: "1.75rem" }}
               />
               <p>
                 {show.show.premiered} {show.show.genres}
