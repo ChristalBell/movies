@@ -46,41 +46,61 @@ const Body = () => {
           type="text"
           placeholder="Search for movies or TV series"
           size={30}
-          style={{ background: "none", border: "none", color: "white" }}
+          style={{
+            background: "none",
+            border: "none",
+            color: "white",
+            fontSize: "1.15rem",
+          }}
         />
       </div>
-
-      <h2>Trending</h2>
+      <h3>Trending</h3>
       <div
         style={{
           display: "flex",
           flexWrap: "wrap",
+          justifyContent: "space-between",
         }}
       >
         {shows.map((show) => {
           return (
             <article
               key={show.show.name}
-              style={{ marginLeft: "2rem", maxWidth: "20vw" }}
+              style={{
+                maxWidth: "30vw",
+                paddingRight: "2rem",
+                marginBottom: "1rem",
+              }}
             >
               <img
                 src={show.show.image.original}
                 alt={show.show.name}
-                width={200}
-                height={200}
-                style={{ borderRadius: "1.75rem" }}
+                width={175}
+                height={175}
+                style={{
+                  borderRadius: "1.75rem",
+                }}
               />
-              <p>
-                {show.show.premiered} {show.show.genres}
+              <p
+                style={{
+                  backgroundColor: "black",
+                  marginTop: "-1.5rem",
+                  marginLeft: "1rem",
+                  opacity: "65%",
+                  textAlign: "center",
+                }}
+              >
+                {show.show.premiered}
               </p>
               <header>
                 <h4>{show.show.name}</h4>
               </header>
-
               <p>
                 Rating = {show.show.rating.average}
-                {show.show.summary}
+                {show.show.genres}
               </p>
+
+              <p>{show.show.summary}</p>
             </article>
 
             // (<h3 key={show.show.name}> {show.show.name} </h3>),
